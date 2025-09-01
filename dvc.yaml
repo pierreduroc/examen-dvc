@@ -29,3 +29,22 @@ stages:
       - src/grid_search_ridge.py
     outs:
       - models/param.pkl
+  train_ridge:
+    cmd: python src/train_ridge.py
+    deps:
+      - data/processed/X_train_scaled.csv
+      - data/processed_data/y_train.csv
+      - models/param.pkl
+      - src/train_ridge.py
+    outs:
+      - models/model_ridge.pkl
+  evaluate_ridge:
+    cmd: python src/evaluate_ridge.py
+    deps:
+      - data/processed/X_test_scaled.csv
+      - data/processed_data/y_test.csv
+      - models/model_ridge.pkl
+      - src/evaluate_ridge.py
+    outs:
+      - metrics/scores.json
+      - data/predictions.csv
