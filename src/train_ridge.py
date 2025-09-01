@@ -1,4 +1,3 @@
-# src/train_ridge.py
 import os
 import argparse
 import pickle

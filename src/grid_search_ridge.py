@@ -1,4 +1,3 @@
-# src/grid_search_ridge.py
 import argparse
 import os
 import pickle

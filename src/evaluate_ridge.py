@@ -1,4 +1,3 @@
-# src/evaluate_ridge.py
 import os
 import argparse
 import json

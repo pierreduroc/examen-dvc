@@ -1,4 +1,3 @@
-# src/scale_features.py
 import os
 import argparse
 import pandas as pd
